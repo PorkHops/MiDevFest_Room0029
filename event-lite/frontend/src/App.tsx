@@ -18,7 +18,7 @@ interface Event {
   summary: string;
 }
 
-const socket: Socket = io("http://localhost:5000");
+const socket: Socket = io("http://localhost:5001");
 
 function App() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -40,7 +40,7 @@ function App() {
     }
 
     // Initial events
-    fetch(`http://localhost:5000/api/events?user_id=${userId}`)
+    fetch(`http://localhost:5001/api/events?user_id=${userId}`)
       .then((r) => r.json())
       .then((data) => setEvents(data));
 
