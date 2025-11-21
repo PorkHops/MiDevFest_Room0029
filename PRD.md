@@ -22,7 +22,7 @@ Event Lite is the simplest way to always know what’s happening locally that yo
 - Works on mobile & desktop
 
 ### 2. Target Users
-- Urban & suburban professionals 22–45  
+- Urban, suburban, and rural professionals 22–45  
 - People who feel FOMO but hate browsing Eventbrite, Facebook Events, Meetup, etc.  
 - Frequent concert/festival goers, foodies, art lovers, runners, parents, gamers, etc.
 
