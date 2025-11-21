@@ -58,7 +58,7 @@ Frontend (React + Vite + TypeScript)
 ├── PWA manifest & service worker
 
 Backend (Python Flask)
-├── Flask + Flask-SQLAlchemy (PostgreSQL)
+├── Flask + Flask-SQLAlchemy (JSON)
 ├── Flask-Login (magic links)
 ├── Flask-SocketIO for real-time chat & timeline push
 ├── Celery + Redis for background scraping jobs
@@ -79,7 +79,7 @@ IBM watsonx.ai Integration
 Deployment
 ├── Backend: Render.com / Fly.io / AWS ECS
 ├── Frontend: Vercel / Netlify
-├── Database: Supabase Postgres or AWS RDS
+├── Database: JSON File
 ├── watsonx: IBM Cloud (GenAI tier)
 ```
 
@@ -90,21 +90,7 @@ Deployment
 - GDPR/CCPA compliant (explicit consent for location & preferences)  
 - Accessible (WCAG 2.1 AA)
 
-### 7. Success Metrics (First 90 Days)
-- 10,000 monthly active users  
-- Average 4.2+ chat sessions per user per week  
-- 65% of users save at least one event in first session  
-- >50% week-1 retention
-
-### 8. Future Roadmap (Post-MVP)
-- Group plans (“Create plan with friends”)  
-- Ticket purchasing in-app  
-- AI-generated event summaries & “why you’ll love this”  
-- Spotify/Instagram interest import  
-- Push notifications (“Your favorite DJ just announced a pop-up tonight”)  
-- Mobile native apps (React Native)
-
-### 9. Risks & Mitigations
+### 7. Risks & Mitigations
 | Risk | Mitigation |
 |------|------------|
 | Event API rate limits | Aggressive caching + fallback to scraping tools inside watsonx |
