@@ -11,28 +11,8 @@ CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 # In-memory mock events (in real app: fetched via watsonx tools)
-MOCK_EVENTS = [
-    {
-        "id": 1,
-        "title": "Sunset Jazz at Riverside Park",
-        "venue": "Riverside Park",
-        "date": (datetime.now() + timedelta(hours=5)).isoformat(),
-        "price": "Free",
-        "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
-        "url": "https://eventbrite.com/e/123",
-        "summary": "Relaxing outdoor jazz with local artists"
-    },
-    {
-        "id": 2,
-        "title": "Vegan Night Market",
-        "venue": "The Old Warehouse",
-        "date": (datetime.now() + timedelta(days=1)).isoformat(),
-        "price": "$5 entry",
-        "image": "https://images.unsplash.com/photo-1606890737304-39519434f824?w=800",
-        "url": "https://meetup.com/e/456",
-        "summary": "30+ vegan vendors, live music, and cocktails"
-    }
-]
+with open('DBEvents.json', 'r') as f:
+    MOCK_EVENTS = json.load(f)
 
 # Store user sessions (in prod: Redis + DB)
 user_sessions = {}

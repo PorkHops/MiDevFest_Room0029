@@ -1,0 +1,22 @@
+[
+    {
+        "id": 2,
+        "title": "Vegan Night Market",
+        "venue": "The Old Warehouse",
+        "date": "2024-11-22T18:00:00",
+        "price": "$5 entry",
+        "image": "https://offloadmedia.feverup.com/secretmelbourne.com/wp-content/uploads/2021/04/30043958/somi-jaiswal-6DsMsaoFmqY-unsplash-1024x576.jpg",
+        "url": "https://meetup.com/e/456",
+        "summary": "30+ vegan vendors, live music, and cocktails"
+    },
+    {
+        "id": 1,
+        "title": "Sunset Jazz at Riverside Park",
+        "venue": "Riverside Park",
+        "date": "2024-11-23T21:00:00",
+        "price": "Free",
+        "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
+        "url": "https://eventbrite.com/e/123",
+        "summary": "Relaxing outdoor jazz with local artists"
+    }
+]
