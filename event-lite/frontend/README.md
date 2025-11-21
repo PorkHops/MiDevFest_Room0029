@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Event Lite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Your personal local event curator — powered by IBM watsonx AI**
 
-Currently, two official plugins are available:
+Event Lite asks you what you’re in the mood for, then instantly shows you the best local events happening today, tomorrow, and this week — no endless scrolling required.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live demo: Open the app → grant location → tap the purple chat bubble → tell the AI what you love (e.g. “I’m into techno, vegan food, and free events under $30”) → watch the timeline update in real time.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Real-time personalized event discovery via IBM watsonx agent
+- Beautiful daily timeline (Today / Tomorrow / This Weekend)
+- One-tap “Interested” + open-in-new-tab
+- Works offline (PWA — installable on phone/desktop)
+- Zero Tailwind bloat — pure vanilla CSS + TypeScript
+- Real-time sync via Flask + Socket.IO
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 18 + Vite + TypeScript + UUID + vanilla CSS
+- **Backend**: Python Flask + Flask-SocketIO + CORS
+- **AI Brain**: IBM watsonx Orchestrate Agent (embedded chat)
+- **Realtime**: Socket.IO (full-duplex)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Quick Start (2 terminals)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Clone the repo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone https://github.com/yourusername/event-lite.git
+cd event-lite
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+cd backend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Create and activate virtual env
+python -m venv venv
+# Windows (Git Bash / CMD):
+venv\Scripts\activate
+# macOS / Linux:
+# source venv/bin/activate
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+pip install Flask flask-socketio flask-cors python-socketio eventlet
+
+# Run
+python app.py
+
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
 ```
