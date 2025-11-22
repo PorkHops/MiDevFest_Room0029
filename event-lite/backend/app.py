@@ -62,7 +62,7 @@ def watsonx_webhook():
     # Save and broadcast to frontend in real-time
     user_sessions[user_id] = events
     socketio.emit('events_update', {'user_id': user_id, 'events': events})
-    
+ 
     return jsonify({"status": "received"}), 200
 
 @socketio.on('connect')

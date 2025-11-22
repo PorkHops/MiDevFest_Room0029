@@ -9,7 +9,7 @@ export default function EventTimeline({ events }: { events: Event[] }) {
       const date = new Date(event.date);
       let key = "";
       if (isToday(date)) key = "Today";
-      else if (isTomorrow(date)) key = "Tomorrow";
+      // else if (isTomorrow(date)) key = "Tomorrow";
       else if (date < addDays(new Date(), 7)) key = format(date, "EEEE");
       else key = "Upcoming";
 

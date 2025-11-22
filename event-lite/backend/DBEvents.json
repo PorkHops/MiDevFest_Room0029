@@ -13,7 +13,7 @@
         "id": 1,
         "title": "Sunset Jazz at Riverside Park",
         "venue": "Riverside Park",
-        "date": "2024-11-23T21:00:00",
+        "date": "2024-11-22T21:00:00",
         "price": "Free",
         "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
         "url": "https://eventbrite.com/e/123",
@@ -55,7 +55,7 @@
         "venue": "Downtown Arts District",
         "date": "2025-11-23T14:00:00",
         "price": "$20",
-        "image": "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=800",
+        "image": "https://www.cktravels.com/wp-content/uploads/2020/06/pascal-bernardon-UHCu3qZ-tSQ-unsplash.jpg",
         "url": "https://eventbrite.com/e/345",
         "summary": "Explore hidden murals with a local artist"
     },
